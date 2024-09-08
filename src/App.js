@@ -1,5 +1,5 @@
 // App.js
-import React, { useState } from "react";
+import React from "react";
 import TabWidget from "./components/TabWidget";
 import GalleryWidget from "./components/GalleryWidget";
 import line from '../src/assets/line.svg'
