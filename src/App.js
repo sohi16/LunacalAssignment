@@ -1,4 +1,3 @@
-// App.js
 import React from "react";
 import TabWidget from "./components/TabWidget";
 import GalleryWidget from "./components/GalleryWidget";

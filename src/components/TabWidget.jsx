@@ -1,4 +1,3 @@
-// TabWidget.js
 import React, { useState } from "react";
 import question from '../assets/Vectorquestion.svg';
 import square from '../assets/square.svg';
@@ -35,22 +34,12 @@ const TabWidget = () => {
                 <img src={question} alt="" className="mt-0.5" />
                 <div className="flex xl:gap-6 items-center justify-between mb-4 basis-[88%] bg-[#171717] shadow-xl shadow-black p-2 rounded-[23px]">
                     {tabs.map((tab) => (
-                        //   <button
-                        //     key={tab.key}
-                        //     onClick={() => setActiveTab(tab.key)}
-                        //     className={`basis-1/3 px-4 py-[10px] rounded-[16px] ${activeTab === tab.key ? "bg-[#28292F] shadow-lg" : "bg-[#171717] text-[#A3ADB2] "} text-[18px] font-primary`}
-                        //   >
-                        //     {tab.name}
-                        //   </button>
                         <button
                             key={tab.key}
                             onClick={() => setActiveTab(tab.key)}
                             className={`relative overflow-hidden basis-1/3 px-4 py-[10px] rounded-[16px] ${activeTab === tab.key ? "bg-[#28292F] shadow-xl" : "bg-[#171717] text-[#A3ADB2]"} text-[18px] font-primary transition-all duration-300 group`}
                         >
-                            {/* Sliding gradient effect on hover for inactive tabs */}
                             <span className={`absolute inset-0 w-full h-full  ${activeTab !== tab.key ? "bg-gradient-to-l from-[#373E44] to-[#191B1F] transform -translate-x-full group-hover:translate-x-0" : "translate-x-0 "} transition-transform duration-700`}></span>
-
-                            {/* Content */}
                             <span className="relative z-10">{tab.name}</span>
                         </button>
                     ))}
@@ -59,7 +48,7 @@ const TabWidget = () => {
             <div className="flex items-center gap-2 bg-[#363C43] p-2 rounded-md text-[#969696] font-secondary">
                 <img src={square} alt="" />
                 {renderContent()}
-                <img src={rectangle} alt="" className="self-start"/>
+                <img src={rectangle} alt="" className="self-start" />
             </div>
         </div>
     );
